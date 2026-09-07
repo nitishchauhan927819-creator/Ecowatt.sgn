@@ -1,0 +1,6 @@
+{
+  "name": "EcoWatt – Campus Micro-Grid Energy Optimizer",
+  "description": "Real-time campus micro-grid energy scheduler that automatically moves deferrable loads to peak solar hours, minimizing electricity costs and carbon emissions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

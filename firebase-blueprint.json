@@ -1,0 +1,45 @@
+{
+  "collections": [
+    {
+      "name": "users",
+      "description": "User profile, microgrid capacity preferences, and active settings",
+      "fields": [
+        {"name": "uid", "type": "string"},
+        {"name": "email", "type": "string"},
+        {"name": "displayName", "type": "string"},
+        {"name": "campusName", "type": "string"},
+        {"name": "solarCapacityKw", "type": "number"},
+        {"name": "batteryCapacityKwh", "type": "number"},
+        {"name": "currency", "type": "string"},
+        {"name": "updatedAt", "type": "timestamp"}
+      ]
+    },
+    {
+      "name": "users/{userId}/loads",
+      "description": "Configured deferrable loads for campus energy scheduling",
+      "fields": [
+        {"name": "id", "type": "string"},
+        {"name": "name", "type": "string"},
+        {"name": "powerKw", "type": "number"},
+        {"name": "durationHours", "type": "number"},
+        {"name": "earliestStart", "type": "number"},
+        {"name": "latestFinish", "type": "number"},
+        {"name": "enabled", "type": "boolean"},
+        {"name": "icon", "type": "string"}
+      ]
+    },
+    {
+      "name": "users/{userId}/runs",
+      "description": "Historical records of optimization runs and metrics achieved",
+      "fields": [
+        {"name": "timestamp", "type": "timestamp"},
+        {"name": "originalCost", "type": "number"},
+        {"name": "optimizedCost", "type": "number"},
+        {"name": "moneySaved", "type": "number"},
+        {"name": "carbonSavedKg", "type": "number"},
+        {"name": "solarUtilPct", "type": "number"},
+        {"name": "preset", "type": "string"}
+      ]
+    }
+  ]
+}
